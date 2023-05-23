@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj": {}
+    "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj": {
+    "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj",
+        "projectUniqueName": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj",
         "projectName": "Otomasyon.BLL",
-        "projectPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj",
-        "packagesPath": "C:\\Users\\Ali Ozan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\obj\\",
+        "projectPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj",
+        "packagesPath": "C:\\Users\\ALİ OZAN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ali Ozan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ALİ OZAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj": {
-                "projectPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj"
+              "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj": {
+                "projectPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj"
               }
             }
           }
@@ -59,21 +59,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\Otomasyon.Entity.csproj": {
+    "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\Otomasyon.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\Otomasyon.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\Otomasyon.Entity.csproj",
         "projectName": "Otomasyon.Entity",
-        "projectPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\Otomasyon.Entity.csproj",
-        "packagesPath": "C:\\Users\\Ali Ozan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\obj\\",
+        "projectPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\Otomasyon.Entity.csproj",
+        "packagesPath": "C:\\Users\\ALİ OZAN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ali Ozan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ALİ OZAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -114,21 +114,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj": {
+    "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj",
+        "projectUniqueName": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj",
         "projectName": "Otomasyon.Model",
-        "projectPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj",
-        "packagesPath": "C:\\Users\\Ali Ozan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\obj\\",
+        "projectPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj",
+        "packagesPath": "C:\\Users\\ALİ OZAN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ali Ozan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ALİ OZAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -142,8 +142,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\Otomasyon.Entity.csproj": {
-                "projectPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\Otomasyon.Entity.csproj"
+              "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\Otomasyon.Entity.csproj": {
+                "projectPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\Otomasyon.Entity.csproj"
               }
             }
           }
@@ -185,7 +185,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -37,10 +37,11 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(12, 74);
+            richTextBox1.Location = new Point(14, 99);
+            richTextBox1.Margin = new Padding(3, 4, 3, 4);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
-            richTextBox1.Size = new Size(495, 241);
+            richTextBox1.Size = new Size(565, 320);
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = "";
             // 
@@ -48,9 +49,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(282, 27);
+            label1.Location = new Point(322, 36);
             label1.Name = "label1";
-            label1.Size = new Size(87, 17);
+            label1.Size = new Size(113, 23);
             label1.TabIndex = 1;
             label1.Text = "SEND DATE :";
             // 
@@ -58,9 +59,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(27, 27);
+            label2.Location = new Point(31, 36);
             label2.Name = "label2";
-            label2.Size = new Size(85, 17);
+            label2.Size = new Size(110, 23);
             label2.TabIndex = 1;
             label2.Text = "WHO SENT :";
             // 
@@ -68,30 +69,31 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(118, 27);
+            label3.Location = new Point(135, 36);
             label3.Name = "label3";
-            label3.Size = new Size(0, 17);
+            label3.Size = new Size(0, 23);
             label3.TabIndex = 1;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(375, 27);
+            label4.Location = new Point(429, 36);
             label4.Name = "label4";
-            label4.Size = new Size(0, 17);
+            label4.Size = new Size(0, 23);
             label4.TabIndex = 1;
             // 
             // MSGSummary
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(519, 327);
+            ClientSize = new Size(593, 436);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(richTextBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "MSGSummary";
             Text = "MSGSummary";
             Load += MSGSummary_Load;

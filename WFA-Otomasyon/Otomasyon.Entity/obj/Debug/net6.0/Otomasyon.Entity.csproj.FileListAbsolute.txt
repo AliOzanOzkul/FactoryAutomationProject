@@ -10,3 +10,27 @@ C:\Users\Ali Ozan\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomas
 C:\Users\Ali Ozan\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\refint\Otomasyon.Entity.dll
 C:\Users\Ali Ozan\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.pdb
 C:\Users\Ali Ozan\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\ref\Otomasyon.Entity.dll
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.Entity\bin\Debug\net6.0\Otomasyon.Entity.deps.json
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.Entity\bin\Debug\net6.0\Otomasyon.Entity.dll
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.Entity\bin\Debug\net6.0\Otomasyon.Entity.pdb
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.csproj.AssemblyReference.cache
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.AssemblyInfoInputs.cache
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.AssemblyInfo.cs
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.csproj.CoreCompileInputs.cache
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.dll
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\refint\Otomasyon.Entity.dll
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.pdb
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\ref\Otomasyon.Entity.dll
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.Entity\bin\Debug\net6.0\Otomasyon.Entity.deps.json
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.Entity\bin\Debug\net6.0\Otomasyon.Entity.dll
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.Entity\bin\Debug\net6.0\Otomasyon.Entity.pdb
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.AssemblyInfo.cs
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.dll
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\refint\Otomasyon.Entity.dll
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\Otomasyon.Entity.pdb
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.Entity\obj\Debug\net6.0\ref\Otomasyon.Entity.dll

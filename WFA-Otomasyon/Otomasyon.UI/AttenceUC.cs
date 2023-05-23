@@ -45,30 +45,37 @@ namespace Otomasyon.UI
                 dataGridView1.DataSource = _db.Attentions.Include(x => x.Employee).Select(x => new { EmplpyeeID = x.Employee.Id, ActiveDate = x.Start, Name = x.Employee.Name, Surname = x.Employee.LastName, ActiveTime = (x.End - x.Start) }).ToList();
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    Document doc = new Document();
-                    PdfWriter.GetInstance(doc, new FileStream(saveFileDialog.FileName, FileMode.Create));
-                    doc.Open();
+                    string filePath = saveFileDialog.FileName;
 
-                    PdfPTable table = new PdfPTable(dataGridView1.Columns.Count);
-                    for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                    using (Document doc = new Document())
                     {
-                        table.AddCell(new Phrase(dataGridView1.Columns[j].HeaderText));
-                    }
-                    table.HeaderRows = 1;
+                        PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(filePath, FileMode.Create));
+                        doc.Open();
 
-                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                    {
-                        for (int k = 0; k < dataGridView1.Columns.Count; k++)
+                        PdfPTable table = new PdfPTable(dataGridView1.Columns.Count);
+                        for (int j = 0; j < dataGridView1.Columns.Count; j++)
                         {
-                            if (dataGridView1[k, i].Value != null)
+                            table.AddCell(new Phrase(dataGridView1.Columns[j].HeaderText));
+                        }
+                        table.HeaderRows = 1;
+
+                        for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                        {
+                            for (int k = 0; k < dataGridView1.Columns.Count; k++)
                             {
-                                table.AddCell(new Phrase(dataGridView1[k, i].Value.ToString()));
+                                if (dataGridView1[k, i].Value != null)
+                                {
+                                    table.AddCell(new Phrase(dataGridView1[k, i].Value.ToString()));
+                                }
                             }
                         }
+
+                        doc.Add(table);
                     }
 
-                    doc.Add(table);
-                    doc.Close();
+                    MessageBox.Show("PDF dosyası başarıyla kaydedildi.");
+
+
                     //dataGridView1.DataSource = _db.Attentions.Include(x => x.Employee).Where(x => x.Employee.Id == LoginForm.user.Id).Select(x => new { EmplpyeeID = x.Employee.Id, ActiveDate = x.Start, Name = x.Employee.Name, Surname = x.Employee.LastName, ActiveTime = (x.End - x.Start) }).ToList();
                 }
             }

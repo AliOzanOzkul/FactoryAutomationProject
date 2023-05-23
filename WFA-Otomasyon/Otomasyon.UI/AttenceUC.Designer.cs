@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AttenceUC));
             dataGridView1 = new DataGridView();
             textBox1 = new TextBox();
             btnPrint = new Button();
             pnlButton = new Panel();
+            ımageList1 = new ImageList(components);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             pnlButton.SuspendLayout();
             SuspendLayout();
@@ -59,9 +62,12 @@
             // 
             // btnPrint
             // 
-            btnPrint.Location = new Point(0, 21);
+            btnPrint.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPrint.ImageKey = "Print.png";
+            btnPrint.ImageList = ımageList1;
+            btnPrint.Location = new Point(0, 17);
             btnPrint.Name = "btnPrint";
-            btnPrint.Size = new Size(919, 34);
+            btnPrint.Size = new Size(919, 38);
             btnPrint.TabIndex = 2;
             btnPrint.Text = "PRINT";
             btnPrint.UseVisualStyleBackColor = true;
@@ -74,6 +80,13 @@
             pnlButton.Name = "pnlButton";
             pnlButton.Size = new Size(919, 63);
             pnlButton.TabIndex = 3;
+            // 
+            // ımageList1
+            // 
+            ımageList1.ColorDepth = ColorDepth.Depth8Bit;
+            ımageList1.ImageStream = (ImageListStreamer)resources.GetObject("ımageList1.ImageStream");
+            ımageList1.TransparentColor = Color.Transparent;
+            ımageList1.Images.SetKeyName(0, "Print.png");
             // 
             // AttenceUC
             // 
@@ -97,5 +110,6 @@
         private TextBox textBox1;
         private Button btnPrint;
         private Panel pnlButton;
+        private ImageList ımageList1;
     }
 }

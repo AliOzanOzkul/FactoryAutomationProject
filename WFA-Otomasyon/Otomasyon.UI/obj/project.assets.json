@@ -11,6 +11,21 @@
           "lib/BouncyCastle.Crypto.dll": {}
         }
       },
+      "FontAwesome/4.7.0": {
+        "type": "package"
+      },
+      "FontAwesome.Sharp/6.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/FontAwesome.Sharp.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/FontAwesome.Sharp.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
       "iTextSharp/5.5.13.3": {
         "type": "package",
         "dependencies": {
@@ -810,6 +825,42 @@
         "bouncycastle.1.8.9.nupkg.sha512",
         "bouncycastle.nuspec",
         "lib/BouncyCastle.Crypto.dll"
+      ]
+    },
+    "FontAwesome/4.7.0": {
+      "sha512": "n4H/brfszElyoZ4kmGh8E75uqvLzLvFr3h2PFVdPH1LwUmWIpeqdaW2pcC4oZAhg7sESyObh0IZpAI8COCNeUg==",
+      "type": "package",
+      "path": "fontawesome/4.7.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Content/font-awesome.css",
+        "Content/Content/font-awesome.min.css",
+        "Content/fonts/FontAwesome.otf",
+        "Content/fonts/fontawesome-webfont.eot",
+        "Content/fonts/fontawesome-webfont.svg",
+        "Content/fonts/fontawesome-webfont.ttf",
+        "Content/fonts/fontawesome-webfont.woff",
+        "Content/fonts/fontawesome-webfont.woff2",
+        "fontawesome.4.7.0.nupkg.sha512",
+        "fontawesome.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "FontAwesome.Sharp/6.3.0": {
+      "sha512": "3/Fb0N04yYK8An07oox5ISlUyNgsnWildHfoP69uqTEOsemQemRyciphMkXZOcdBupjUD+lVsRE3FqG41/dzPA==",
+      "type": "package",
+      "path": "fontawesome.sharp/6.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fontawesome.sharp.6.3.0.nupkg.sha512",
+        "fontawesome.sharp.nuspec",
+        "lib/net472/FontAwesome.Sharp.dll",
+        "lib/net48/FontAwesome.Sharp.dll",
+        "lib/net6.0-windows7.0/FontAwesome.Sharp.dll",
+        "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
       ]
     },
     "iTextSharp/5.5.13.3": {
@@ -2008,6 +2059,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "FontAwesome >= 4.7.0",
+      "FontAwesome.Sharp >= 6.3.0",
       "Otomasyon.BLL >= 1.0.0",
       "Otomasyon.Entity >= 1.0.0",
       "Otomasyon.Model >= 1.0.0",
@@ -2015,19 +2068,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ali Ozan\\.nuget\\packages\\": {}
+    "C:\\Users\\ALİ OZAN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.UI\\Otomasyon.UI.csproj",
+      "projectUniqueName": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.UI\\Otomasyon.UI.csproj",
       "projectName": "Otomasyon.UI",
-      "projectPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.UI\\Otomasyon.UI.csproj",
-      "packagesPath": "C:\\Users\\Ali Ozan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.UI\\obj\\",
+      "projectPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.UI\\Otomasyon.UI.csproj",
+      "packagesPath": "C:\\Users\\ALİ OZAN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.UI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ali Ozan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ALİ OZAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2041,14 +2094,14 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj": {
-              "projectPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj"
+            "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj": {
+              "projectPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj"
             },
-            "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\Otomasyon.Entity.csproj": {
-              "projectPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\Otomasyon.Entity.csproj"
+            "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\Otomasyon.Entity.csproj": {
+              "projectPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Entity\\Otomasyon.Entity.csproj"
             },
-            "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj": {
-              "projectPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj"
+            "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj": {
+              "projectPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj"
             }
           }
         }
@@ -2063,6 +2116,14 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
+          "FontAwesome": {
+            "target": "Package",
+            "version": "[4.7.0, )"
+          },
+          "FontAwesome.Sharp": {
+            "target": "Package",
+            "version": "[6.3.0, )"
+          },
           "iTextSharp": {
             "target": "Package",
             "version": "[5.5.13.3, )"
@@ -2087,7 +2148,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   },

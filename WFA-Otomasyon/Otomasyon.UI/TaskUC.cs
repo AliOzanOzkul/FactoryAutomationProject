@@ -1,5 +1,6 @@
 ﻿using Otomasyon.BLL.Services;
 using Otomasyon.Model.Context;
+using System.Windows.Forms;
 
 namespace Otomasyon.UI
 {
@@ -17,7 +18,8 @@ namespace Otomasyon.UI
         private void TaskUC_Load(object sender, EventArgs e)
         {
             dgEmployee.DataSource = EmplyeeService.GetAllEmployees();
-            dgManager.DataSource = EmplyeeService.GetAllEmployees();
+
+
         }
 
         private void dgEmployee_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -34,13 +36,24 @@ namespace Otomasyon.UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (control)
+            try
             {
-                TaskServices.AddTask(dgMang, txtTaskName.Text, rbMsg.Text, "A", dtpTarih.Value);
+                if (control)
+                {
+
+                    TaskServices.AddTask(dgMang, txtTaskName.Text, rbMsg.Text, "A", dtpTarih.Value);
+                    MessageBox.Show("task assigned");
+
+                }
+                else
+                {
+                    TaskServices.AddTask(dgempIndex, txtTaskName.Text, rbMsg.Text, "B", dtpTarih.Value);
+                    MessageBox.Show("task assigned");
+                }
             }
-            else
+            catch (Exception)
             {
-                TaskServices.AddTask(dgempIndex, txtTaskName.Text, rbMsg.Text, "B", dtpTarih.Value);
+                MessageBox.Show("Task assing can not be more than three");
             }
         }
 
@@ -57,6 +70,20 @@ namespace Otomasyon.UI
                 string searchText = textBox2.Text.ToLower();
                 var list = _db.Employees.ToList();
                 dgEmployee.DataSource = list.Where(x => x.Name.Contains(searchText)).ToList();
+            }
+        }
+
+        private void dgEmployee_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+        }
+
+        private void dgEmployee_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            if (TaskServices.EmployeTaskControl(e.RowIndex))
+            {
+                DataGridViewRow row = dgEmployee.Rows[e.RowIndex];
+                row.DefaultCellStyle.BackColor = Color.Pink;
             }
         }
     }

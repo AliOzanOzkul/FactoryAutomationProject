@@ -15,3 +15,37 @@ C:\Users\Ali Ozan\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon
 C:\Users\Ali Ozan\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\refint\Otomasyon.BLL.dll
 C:\Users\Ali Ozan\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.pdb
 C:\Users\Ali Ozan\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\ref\Otomasyon.BLL.dll
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\bin\Debug\net6.0\Otomasyon.BLL.deps.json
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\bin\Debug\net6.0\Otomasyon.BLL.dll
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\bin\Debug\net6.0\Otomasyon.BLL.pdb
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\bin\Debug\net6.0\Otomasyon.Entity.dll
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\bin\Debug\net6.0\Otomasyon.Model.dll
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\bin\Debug\net6.0\Otomasyon.Model.pdb
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\bin\Debug\net6.0\Otomasyon.Entity.pdb
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.csproj.AssemblyReference.cache
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.AssemblyInfoInputs.cache
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.AssemblyInfo.cs
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.csproj.CoreCompileInputs.cache
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.csproj.CopyComplete
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.dll
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\refint\Otomasyon.BLL.dll
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.pdb
+C:\Users\ALİ OZAN\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\ref\Otomasyon.BLL.dll
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\bin\Debug\net6.0\Otomasyon.BLL.deps.json
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\bin\Debug\net6.0\Otomasyon.BLL.dll
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\bin\Debug\net6.0\Otomasyon.BLL.pdb
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\bin\Debug\net6.0\Otomasyon.Entity.dll
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\bin\Debug\net6.0\Otomasyon.Model.dll
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\bin\Debug\net6.0\Otomasyon.Model.pdb
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\bin\Debug\net6.0\Otomasyon.Entity.pdb
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.AssemblyInfo.cs
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.csproj.CopyComplete
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.dll
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\refint\Otomasyon.BLL.dll
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\Otomasyon.BLL.pdb
+C:\Users\HP\Desktop\WFA-Otomasyon\Otomasyon.BLL\obj\Debug\net6.0\ref\Otomasyon.BLL.dll

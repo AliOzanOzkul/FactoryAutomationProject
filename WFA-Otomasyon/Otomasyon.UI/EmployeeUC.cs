@@ -24,7 +24,7 @@ namespace Otomasyon.UI
         {
             cbGender.DataSource = Enum.GetNames(typeof(Gender));
             cbDepartman.DataSource = Enum.GetNames(typeof(Departman));
-            cbInsurance.DataSource = Enum.GetNames(typeof(InsuranceCompany));
+
             dataGridView1.DataSource = EmplyeeService.GetAllEmployees();
 
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -32,12 +32,20 @@ namespace Otomasyon.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            try
+            {
 
 
-            Employee employee = new Employee() { Id = Convert.ToInt32(txtId.Text), Name = txtName.Text, LastName = txtLastName.Text, Departman = (Departman)cbDepartman.SelectedIndex, Gender = (Gender)cbGender.SelectedIndex, BirthDay = Convert.ToDateTime(txtDOB.Text), PhoneNo = Convert.ToInt32(txtPhoneNo.Text), IdentityNo = Convert.ToInt64(txtIdentityNo.Text), Salary = Convert.ToDecimal(txtSalary.Text) };
-            EmplyeeService.AddEmployee(employee);
-            dataGridView1.DataSource = EmplyeeService.GetAllEmployees();
+                Employee employee = new Employee() { Name = txtName.Text, LastName = txtLastName.Text, Departman = (Departman)cbDepartman.SelectedIndex, Gender = (Gender)cbGender.SelectedIndex, BirthDay = dateTimePicker1.Value, PhoneNo = Convert.ToInt64(txtPhoneNo.Text), IdentityNo = Convert.ToInt64(txtIdentityNo.Text), Salary = Convert.ToDecimal(txtSalary.Text) };
+                EmplyeeService.AddEmployee(employee);
+                dataGridView1.DataSource = EmplyeeService.GetAllEmployees();
 
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please Enter Correctly");
+
+            }
 
 
         }
@@ -46,7 +54,7 @@ namespace Otomasyon.UI
         {
             index = e.RowIndex;
             var employee = EmplyeeService.GetEmployee(index);
-            txtId.Text = employee.Id.ToString();
+
             txtName.Text = employee.Name.ToString();
             txtLastName.Text = employee.LastName.ToString();
             txtIdentityNo.Text = employee.IdentityNo.ToString();
@@ -54,18 +62,18 @@ namespace Otomasyon.UI
             txtPhoneNo.Text = employee.PhoneNo.ToString();
             cbDepartman.Text = employee.Departman.ToString();
             cbGender.Text = employee.Gender.ToString();
-            txtDOB.Text = employee.BirthDay.ToShortDateString().ToString();
+            dateTimePicker1.Text = employee.BirthDay.ToShortDateString().ToString();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             var selectedEmp = _db.Employees.ToList();
-            selectedEmp[index].Id = Convert.ToInt32(txtId.Text);
+
             selectedEmp[index].Name = txtName.Text;
             selectedEmp[index].LastName = txtLastName.Text;
             selectedEmp[index].Departman = (Departman)cbDepartman.SelectedIndex;
             selectedEmp[index].Gender = (Gender)cbGender.SelectedIndex;
-            selectedEmp[index].BirthDay = Convert.ToDateTime(txtDOB.Text);
+            selectedEmp[index].BirthDay = Convert.ToDateTime(dateTimePicker1.Value);
             selectedEmp[index].PhoneNo = Convert.ToInt32(txtPhoneNo.Text);
             selectedEmp[index].IdentityNo = Convert.ToInt64(txtIdentityNo.Text);
             selectedEmp[index].Salary = Convert.ToDecimal(txtSalary.Text);
@@ -84,24 +92,38 @@ namespace Otomasyon.UI
         private void btnPic_Click(object sender, EventArgs e)
         {
 
-
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            try
             {
-                string selectedFilePath = openFileDialog1.FileName;
-                string destinationDirectory = @"C:\Users\Ali Ozan\Desktop\WFA-Otomasyon\Otomasyon.UI\img\";
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedFilePath = openFileDialog1.FileName;
+                    string fileName = Path.GetFileName(selectedFilePath);
 
+                    string destinationDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "img");
+                    string destinationFilePath = Path.Combine(destinationDirectory, fileName);
 
+                    // Başka bir bilgisayarda dizin kontrolü ve oluşturma
+                    if (!Directory.Exists(destinationDirectory))
+                    {
+                        Directory.CreateDirectory(destinationDirectory);
+                    }
 
-                string fileName = Path.GetFileName(selectedFilePath);
-                string destinationFilePath = Path.Combine(destinationDirectory, fileName);
-                File.Copy(selectedFilePath, destinationFilePath, true);
+                    File.Copy(selectedFilePath, destinationFilePath, true);
 
-
-                System.Drawing.Image image = System.Drawing.Image.FromFile(destinationFilePath);
-                EmplyeeService.LoadPic(destinationFilePath, index);
-                pictureBox1.Image = image;
+                    using (System.Drawing.Image image = System.Drawing.Image.FromFile(destinationFilePath))
+                    {
+                        EmplyeeService.LoadPic(destinationFilePath, index);
+                        pictureBox1.Image = (System.Drawing.Image)image.Clone();
+                    }
+                }
             }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Please Enter Corectly");
+            }
+
 
 
         }
@@ -152,7 +174,26 @@ namespace Otomasyon.UI
 
         private void btnExpenses_Click(object sender, EventArgs e)
         {
-            ExpensesServices.AddExpenses(new Expenses() { Name = cbInsurance.Text, Bill = Convert.ToDecimal(textBox7.Text) });
+
+        }
+
+        private void txtPhoneNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            base.OnKeyPress(e);
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            base.OnKeyPress(e);
+
         }
     }
 }

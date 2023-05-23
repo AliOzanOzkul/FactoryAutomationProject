@@ -28,26 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeUC));
             textBox1 = new TextBox();
-            txtId = new TextBox();
             txtPhoneNo = new TextBox();
             txtSalary = new TextBox();
             txtName = new TextBox();
             txtIdentityNo = new TextBox();
             txtLastName = new TextBox();
-            txtDOB = new TextBox();
             cbDepartman = new ComboBox();
             cbGender = new ComboBox();
             btnAdd = new Button();
+            ımageList1 = new ImageList(components);
             btnUpdate = new Button();
             btnDelete = new Button();
-            cbInsurance = new ComboBox();
-            textBox7 = new TextBox();
             pictureBox1 = new PictureBox();
             btnPic = new Button();
             dataGridView1 = new DataGridView();
             btnPrint = new Button();
-            label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -56,9 +54,7 @@
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            btnExpenses = new Button();
+            dateTimePicker1 = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -71,19 +67,13 @@
             textBox1.TabIndex = 0;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // txtId
-            // 
-            txtId.Location = new Point(54, 81);
-            txtId.Name = "txtId";
-            txtId.Size = new Size(121, 23);
-            txtId.TabIndex = 1;
-            // 
             // txtPhoneNo
             // 
             txtPhoneNo.Location = new Point(54, 144);
             txtPhoneNo.Name = "txtPhoneNo";
             txtPhoneNo.Size = new Size(121, 23);
             txtPhoneNo.TabIndex = 1;
+            txtPhoneNo.KeyPress += txtPhoneNo_KeyPress;
             // 
             // txtSalary
             // 
@@ -91,13 +81,15 @@
             txtSalary.Name = "txtSalary";
             txtSalary.Size = new Size(121, 23);
             txtSalary.TabIndex = 1;
+            txtSalary.KeyPress += txtPhoneNo_KeyPress;
             // 
             // txtName
             // 
-            txtName.Location = new Point(237, 81);
+            txtName.Location = new Point(54, 81);
             txtName.Name = "txtName";
             txtName.Size = new Size(121, 23);
             txtName.TabIndex = 1;
+            txtName.KeyPress += txtName_KeyPress;
             // 
             // txtIdentityNo
             // 
@@ -105,20 +97,15 @@
             txtIdentityNo.Name = "txtIdentityNo";
             txtIdentityNo.Size = new Size(121, 23);
             txtIdentityNo.TabIndex = 1;
+            txtIdentityNo.KeyPress += txtPhoneNo_KeyPress;
             // 
             // txtLastName
             // 
-            txtLastName.Location = new Point(425, 81);
+            txtLastName.Location = new Point(237, 81);
             txtLastName.Name = "txtLastName";
             txtLastName.Size = new Size(121, 23);
             txtLastName.TabIndex = 1;
-            // 
-            // txtDOB
-            // 
-            txtDOB.Location = new Point(425, 144);
-            txtDOB.Name = "txtDOB";
-            txtDOB.Size = new Size(121, 23);
-            txtDOB.TabIndex = 1;
+            txtLastName.KeyPress += txtName_KeyPress;
             // 
             // cbDepartman
             // 
@@ -131,13 +118,16 @@
             // cbGender
             // 
             cbGender.FormattingEnabled = true;
-            cbGender.Location = new Point(425, 201);
+            cbGender.Location = new Point(425, 144);
             cbGender.Name = "cbGender";
             cbGender.Size = new Size(121, 23);
             cbGender.TabIndex = 2;
             // 
             // btnAdd
             // 
+            btnAdd.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAdd.ImageIndex = 0;
+            btnAdd.ImageList = ımageList1;
             btnAdd.Location = new Point(54, 241);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(121, 28);
@@ -146,8 +136,22 @@
             btnAdd.UseVisualStyleBackColor = true;
             btnAdd.Click += btnAdd_Click;
             // 
+            // ımageList1
+            // 
+            ımageList1.ColorDepth = ColorDepth.Depth8Bit;
+            ımageList1.ImageStream = (ImageListStreamer)resources.GetObject("ımageList1.ImageStream");
+            ımageList1.TransparentColor = Color.Transparent;
+            ımageList1.Images.SetKeyName(0, "Add Employee.png");
+            ımageList1.Images.SetKeyName(1, "Add Picture.png");
+            ımageList1.Images.SetKeyName(2, "Delete Employee.png");
+            ımageList1.Images.SetKeyName(3, "Update.png");
+            ımageList1.Images.SetKeyName(4, "Print.png");
+            // 
             // btnUpdate
             // 
+            btnUpdate.ImageAlign = ContentAlignment.MiddleLeft;
+            btnUpdate.ImageKey = "Update.png";
+            btnUpdate.ImageList = ımageList1;
             btnUpdate.Location = new Point(237, 241);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(121, 28);
@@ -158,6 +162,9 @@
             // 
             // btnDelete
             // 
+            btnDelete.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDelete.ImageKey = "Delete Employee.png";
+            btnDelete.ImageList = ımageList1;
             btnDelete.Location = new Point(425, 241);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(121, 28);
@@ -165,21 +172,6 @@
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
             btnDelete.Click += btnDelete_Click;
-            // 
-            // cbInsurance
-            // 
-            cbInsurance.FormattingEnabled = true;
-            cbInsurance.Location = new Point(827, 81);
-            cbInsurance.Name = "cbInsurance";
-            cbInsurance.Size = new Size(121, 23);
-            cbInsurance.TabIndex = 2;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(827, 144);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(121, 23);
-            textBox7.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -191,6 +183,9 @@
             // 
             // btnPic
             // 
+            btnPic.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPic.ImageKey = "Add Picture.png";
+            btnPic.ImageList = ımageList1;
             btnPic.Location = new Point(630, 241);
             btnPic.Name = "btnPic";
             btnPic.Size = new Size(144, 28);
@@ -215,29 +210,22 @@
             // 
             // btnPrint
             // 
+            btnPrint.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPrint.ImageKey = "Print.png";
+            btnPrint.ImageList = ımageList1;
             btnPrint.Location = new Point(30, 484);
             btnPrint.Name = "btnPrint";
-            btnPrint.Size = new Size(932, 23);
+            btnPrint.Size = new Size(932, 32);
             btnPrint.TabIndex = 6;
             btnPrint.Text = "Print";
             btnPrint.UseVisualStyleBackColor = true;
             btnPrint.Click += btnPrint_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(54, 61);
-            label1.Name = "label1";
-            label1.Size = new Size(86, 17);
-            label1.TabIndex = 7;
-            label1.Text = "Employee ID";
-            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(237, 61);
+            label2.Location = new Point(54, 61);
             label2.Name = "label2";
             label2.Size = new Size(44, 17);
             label2.TabIndex = 7;
@@ -247,7 +235,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(425, 61);
+            label3.Location = new Point(237, 61);
             label3.Name = "label3";
             label3.Size = new Size(73, 17);
             label3.TabIndex = 7;
@@ -277,7 +265,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(425, 124);
+            label6.Location = new Point(424, 61);
             label6.Name = "label6";
             label6.Size = new Size(36, 17);
             label6.TabIndex = 7;
@@ -307,76 +295,46 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(425, 181);
+            label9.Location = new Point(425, 124);
             label9.Name = "label9";
             label9.Size = new Size(52, 17);
             label9.TabIndex = 7;
             label9.Text = "Gender";
             // 
-            // label10
+            // dateTimePicker1
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(827, 61);
-            label10.Name = "label10";
-            label10.Size = new Size(133, 17);
-            label10.TabIndex = 7;
-            label10.Text = "Insurance Company ";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(829, 124);
-            label11.Name = "label11";
-            label11.Size = new Size(121, 17);
-            label11.TabIndex = 7;
-            label11.Text = "Insurance Expense";
-            // 
-            // btnExpenses
-            // 
-            btnExpenses.Location = new Point(827, 241);
-            btnExpenses.Name = "btnExpenses";
-            btnExpenses.Size = new Size(121, 28);
-            btnExpenses.TabIndex = 3;
-            btnExpenses.Text = "Add Expenses";
-            btnExpenses.UseVisualStyleBackColor = true;
-            btnExpenses.Click += btnExpenses_Click;
+            dateTimePicker1.Location = new Point(424, 81);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(122, 23);
+            dateTimePicker1.TabIndex = 8;
             // 
             // EmployeeUC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dateTimePicker1);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label6);
             Controls.Add(label5);
-            Controls.Add(label11);
-            Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label4);
-            Controls.Add(label1);
             Controls.Add(btnPrint);
             Controls.Add(dataGridView1);
             Controls.Add(pictureBox1);
-            Controls.Add(btnExpenses);
             Controls.Add(btnPic);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btnAdd);
-            Controls.Add(cbInsurance);
             Controls.Add(cbGender);
             Controls.Add(cbDepartman);
             Controls.Add(txtSalary);
-            Controls.Add(textBox7);
-            Controls.Add(txtDOB);
             Controls.Add(txtIdentityNo);
             Controls.Add(txtPhoneNo);
             Controls.Add(txtLastName);
             Controls.Add(txtName);
-            Controls.Add(txtId);
             Controls.Add(textBox1);
             Name = "EmployeeUC";
             Size = new Size(984, 529);
@@ -390,7 +348,6 @@
         #endregion
 
         private TextBox textBox1;
-        private TextBox txtId;
         private TextBox txtPhoneNo;
         private TextBox txtSalary;
         private TextBox txtName;
@@ -402,13 +359,10 @@
         private Button btnAdd;
         private Button btnUpdate;
         private Button btnDelete;
-        private ComboBox cbInsurance;
-        private TextBox textBox7;
         private PictureBox pictureBox1;
         private Button btnPic;
         private DataGridView dataGridView1;
         private Button btnPrint;
-        private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -417,8 +371,7 @@
         private Label label7;
         private Label label8;
         private Label label9;
-        private Label label10;
-        private Label label11;
-        private Button btnExpenses;
+        private DateTimePicker dateTimePicker1;
+        private ImageList ımageList1;
     }
 }

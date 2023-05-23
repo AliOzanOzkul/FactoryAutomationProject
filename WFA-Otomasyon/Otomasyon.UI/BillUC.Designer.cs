@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillUC));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -51,6 +53,8 @@
             lblTotal = new Label();
             label11 = new Label();
             txtSearch = new TextBox();
+            btnAdd = new Button();
+            ımageList1 = new ImageList(components);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -136,10 +140,12 @@
             // 
             // txtSalary
             // 
+            txtSalary.AccessibleRole = AccessibleRole.Indicator;
             txtSalary.Location = new Point(206, 35);
             txtSalary.Name = "txtSalary";
             txtSalary.Size = new Size(178, 23);
             txtSalary.TabIndex = 1;
+            txtSalary.KeyPress += txtSalary_KeyPress;
             // 
             // txtElec
             // 
@@ -147,6 +153,7 @@
             txtElec.Name = "txtElec";
             txtElec.Size = new Size(178, 23);
             txtElec.TabIndex = 1;
+            txtElec.KeyPress += txtElec_KeyPress;
             // 
             // txtIndernet
             // 
@@ -154,6 +161,7 @@
             txtIndernet.Name = "txtIndernet";
             txtIndernet.Size = new Size(178, 23);
             txtIndernet.TabIndex = 1;
+            txtIndernet.KeyPress += txtSalary_KeyPress;
             // 
             // txtWater
             // 
@@ -161,6 +169,7 @@
             txtWater.Name = "txtWater";
             txtWater.Size = new Size(178, 23);
             txtWater.TabIndex = 1;
+            txtWater.KeyPress += txtElec_KeyPress;
             // 
             // txtGas
             // 
@@ -168,6 +177,7 @@
             txtGas.Name = "txtGas";
             txtGas.Size = new Size(178, 23);
             txtGas.TabIndex = 1;
+            txtGas.KeyPress += txtSalary_KeyPress;
             // 
             // txtRent
             // 
@@ -175,6 +185,7 @@
             txtRent.Name = "txtRent";
             txtRent.Size = new Size(178, 23);
             txtRent.TabIndex = 1;
+            txtRent.KeyPress += txtElec_KeyPress;
             // 
             // txtLaunch
             // 
@@ -182,6 +193,7 @@
             txtLaunch.Name = "txtLaunch";
             txtLaunch.Size = new Size(178, 23);
             txtLaunch.TabIndex = 1;
+            txtLaunch.KeyPress += txtSalary_KeyPress;
             // 
             // txtClean
             // 
@@ -189,12 +201,16 @@
             txtClean.Name = "txtClean";
             txtClean.Size = new Size(178, 23);
             txtClean.TabIndex = 1;
+            txtClean.KeyPress += txtSalary_KeyPress;
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(61, 201);
+            btnUpdate.ImageAlign = ContentAlignment.MiddleLeft;
+            btnUpdate.ImageIndex = 1;
+            btnUpdate.ImageList = ımageList1;
+            btnUpdate.Location = new Point(417, 201);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(323, 45);
+            btnUpdate.Size = new Size(184, 45);
             btnUpdate.TabIndex = 2;
             btnUpdate.Text = "UPDATE";
             btnUpdate.UseVisualStyleBackColor = true;
@@ -202,9 +218,12 @@
             // 
             // btnPrint
             // 
-            btnPrint.Location = new Point(569, 201);
+            btnPrint.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPrint.ImageIndex = 2;
+            btnPrint.ImageList = ımageList1;
+            btnPrint.Location = new Point(710, 201);
             btnPrint.Name = "btnPrint";
-            btnPrint.Size = new Size(323, 45);
+            btnPrint.Size = new Size(182, 45);
             btnPrint.TabIndex = 2;
             btnPrint.Text = "PRINT";
             btnPrint.UseVisualStyleBackColor = true;
@@ -261,12 +280,35 @@
             txtSearch.TabIndex = 1;
             txtSearch.TextChanged += txtSearch_TextChanged;
             // 
+            // btnAdd
+            // 
+            btnAdd.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAdd.ImageKey = "Add Employee.png";
+            btnAdd.ImageList = ımageList1;
+            btnAdd.Location = new Point(119, 201);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(184, 45);
+            btnAdd.TabIndex = 2;
+            btnAdd.Text = "ADD";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // ımageList1
+            // 
+            ımageList1.ColorDepth = ColorDepth.Depth8Bit;
+            ımageList1.ImageStream = (ImageListStreamer)resources.GetObject("ımageList1.ImageStream");
+            ımageList1.TransparentColor = Color.Transparent;
+            ımageList1.Images.SetKeyName(0, "Add Employee.png");
+            ımageList1.Images.SetKeyName(1, "Update.png");
+            ımageList1.Images.SetKeyName(2, "Print.png");
+            // 
             // BillUC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dataGridView1);
             Controls.Add(btnPrint);
+            Controls.Add(btnAdd);
             Controls.Add(btnUpdate);
             Controls.Add(txtClean);
             Controls.Add(txtSearch);
@@ -321,5 +363,7 @@
         private Label lblTotal;
         private Label label11;
         private TextBox txtSearch;
+        private Button btnAdd;
+        private ImageList ımageList1;
     }
 }

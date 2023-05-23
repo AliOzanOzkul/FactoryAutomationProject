@@ -25,6 +25,9 @@
     <Compile Update="MSGSummary.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="TaskSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="TaskUC.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -114,13 +114,14 @@ namespace Otomasyon.UI
         {
             dataGridView1.DataSource = ExpensesServices.GetExpenses().Select(x => new { x.DateTime, x.Name, x.Bill }).ToList();
             lblTotal.Text = ExpensesServices.GetTotalExpense().ToString();
+
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             string searchText = txtSearch.Text.ToLower();
             var list = _db.Expenses.ToList();
-            dataGridView1.DataSource = list.Where(x => x.DateTime.ToString().Contains(searchText) || x.Name.ToString().Contains(searchText)).ToList();
+            dataGridView1.DataSource = list.Where(x => x.DateTime.ToString().ToLower().Contains(searchText.ToLower()) || x.Name.ToString().ToLower().Contains(searchText.ToLower())).ToList();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -241,78 +242,247 @@ namespace Otomasyon.UI
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            var billList = _db.Expenses.ToList();
-            if (billList[index].Name == "Salary")
+            try
             {
-                billList[index].Bill = Convert.ToDecimal(txtSalary.Text);
-                _db.SaveChanges();
+                var billList = _db.Expenses.ToList();
+                if (billList[index].Name == "Salary")
+                {
+                    billList[index].Bill = Convert.ToDecimal(txtSalary.Text);
+                    _db.SaveChanges();
 
 
 
+                }
+                else if (billList[index].Name == "Clean")
+                {
+
+                    billList[index].Bill = Convert.ToDecimal(txtClean.Text);
+                    _db.SaveChanges();
+
+
+                }
+                else if (billList[index].Name == "Electricity")
+                {
+
+                    billList[index].Bill = Convert.ToDecimal(txtElec.Text);
+                    _db.SaveChanges();
+
+
+                }
+                else if (billList[index].Name == "Gas")
+                {
+                    billList[index].Bill = Convert.ToDecimal(txtGas.Text);
+                    _db.SaveChanges();
+
+
+                }
+                else if (billList[index].Name == "Internet")
+                {
+
+                    billList[index].Bill = Convert.ToDecimal(txtIndernet.Text);
+                    _db.SaveChanges();
+
+
+                }
+                else if (billList[index].Name == "Launch")
+                {
+
+
+                    billList[index].Bill = Convert.ToDecimal(txtLaunch.Text);
+                    _db.SaveChanges();
+
+
+                }
+                else if (billList[index].Name == "Rent")
+                {
+
+                    billList[index].Bill = Convert.ToDecimal(txtRent.Text);
+                    _db.SaveChanges();
+
+
+                }
+                else if (billList[index].Name == "Search")
+                {
+
+                    billList[index].Bill = Convert.ToDecimal(txtSearch.Text);
+                    _db.SaveChanges();
+
+
+                }
+                else if (billList[index].Name == "Water")
+                {
+
+                    billList[index].Bill = Convert.ToDecimal(txtWater.Text);
+                    _db.SaveChanges();
+                }
+                dataGridView1.DataSource = ExpensesServices.GetExpenses().Select(x => new { x.DateTime, x.Name, x.Bill }).ToList();
             }
-            else if (billList[index].Name == "Clean")
+            catch (Exception)
             {
 
-                billList[index].Bill = Convert.ToDecimal(txtClean.Text);
-                _db.SaveChanges();
-
-
+                MessageBox.Show("Please Enter Correctly");
             }
-            else if (billList[index].Name == "Electricity")
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                var billList = _db.Expenses.ToList();
+                if (txtSalary.Text != "")
+                {
+                    _db.Expenses.Add(new Entity.Classes.Expenses()
+                    {
+                        Bill = Convert.ToDecimal(txtSalary.Text),
+                        DateTime = DateTime.Now,
+                        Name = "Salary"
+
+                    });
+                    _db.SaveChanges();
+
+
+
+                }
+                if (txtClean.Text != "")
+                {
+                    _db.Expenses.Add(new Entity.Classes.Expenses()
+                    {
+                        Bill = Convert.ToDecimal(txtClean.Text),
+                        DateTime = DateTime.Now,
+                        Name = "Clean"
+
+                    });
+
+                    _db.SaveChanges();
+
+
+                }
+                if (txtElec.Text != "")
+                {
+                    _db.Expenses.Add(new Entity.Classes.Expenses()
+                    {
+                        Bill = Convert.ToDecimal(txtElec.Text),
+                        DateTime = DateTime.Now,
+                        Name = "Electrycity"
+
+                    });
+
+                    _db.SaveChanges();
+
+
+                }
+                if (txtGas.Text != "")
+                {
+                    _db.Expenses.Add(new Entity.Classes.Expenses()
+                    {
+                        Bill = Convert.ToDecimal(txtGas.Text),
+                        DateTime = DateTime.Now,
+                        Name = "Gas"
+
+                    });
+
+                    _db.SaveChanges();
+
+
+                }
+                if (txtIndernet.Text != "")
+                {
+                    _db.Expenses.Add(new Entity.Classes.Expenses()
+                    {
+                        Bill = Convert.ToDecimal(txtIndernet.Text),
+                        DateTime = DateTime.Now,
+                        Name = "Internet"
+
+                    });
+
+
+                    _db.SaveChanges();
+
+
+                }
+                if (txtLaunch.Text != "")
+                {
+                    _db.Expenses.Add(new Entity.Classes.Expenses()
+                    {
+                        Bill = Convert.ToDecimal(txtLaunch.Text),
+                        DateTime = DateTime.Now,
+                        Name = "Launch"
+
+                    });
+
+                    _db.SaveChanges();
+
+
+                }
+                if (txtRent.Text != "")
+                {
+                    _db.Expenses.Add(new Entity.Classes.Expenses()
+                    {
+                        Bill = Convert.ToDecimal(txtRent.Text),
+                        DateTime = DateTime.Now,
+                        Name = "Rent"
+
+                    });
+
+                    _db.SaveChanges();
+
+
+                }
+                if (txtSearch.Text != "")
+                {
+                    _db.Expenses.Add(new Entity.Classes.Expenses()
+                    {
+                        Bill = Convert.ToDecimal(txtSearch.Text),
+                        DateTime = DateTime.Now,
+                        Name = "Search"
+
+                    });
+
+
+                    _db.SaveChanges();
+
+
+                }
+                if (txtWater.Text != "")
+                {
+                    _db.Expenses.Add(new Entity.Classes.Expenses()
+                    {
+                        Bill = Convert.ToDecimal(txtWater.Text),
+                        DateTime = DateTime.Now,
+                        Name = "Water"
+
+                    });
+
+
+
+                    _db.SaveChanges();
+                }
+                dataGridView1.DataSource = ExpensesServices.GetExpenses().Select(x => new { x.DateTime, x.Name, x.Bill }).ToList();
+            }
+            catch (Exception)
             {
 
-                billList[index].Bill = Convert.ToDecimal(txtElec.Text);
-                _db.SaveChanges();
-
-
+                MessageBox.Show("Please Enter Correctly");
             }
-            else if (billList[index].Name == "Gas")
+        }
+
+        private void txtSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                billList[index].Bill = Convert.ToDecimal(txtGas.Text);
-                _db.SaveChanges();
-
-
+                e.Handled = true;
             }
-            else if (billList[index].Name == "Internet")
+            base.OnKeyPress(e);
+        }
+
+        private void txtElec_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-
-                billList[index].Bill = Convert.ToDecimal(txtIndernet.Text);
-                _db.SaveChanges();
-
-
+                e.Handled = true;
             }
-            else if (billList[index].Name == "Launch")
-            {
-
-
-                billList[index].Bill = Convert.ToDecimal(txtLaunch.Text);
-                _db.SaveChanges();
-
-
-            }
-            else if (billList[index].Name == "Rent")
-            {
-
-                billList[index].Bill = Convert.ToDecimal(txtRent.Text);
-                _db.SaveChanges();
-
-
-            }
-            else if (billList[index].Name == "Search")
-            {
-
-                billList[index].Bill = Convert.ToDecimal(txtSearch.Text);
-                _db.SaveChanges();
-
-
-            }
-            else if (billList[index].Name == "Water")
-            {
-
-                billList[index].Bill = Convert.ToDecimal(txtWater.Text);
-                _db.SaveChanges();
-            }
-            dataGridView1.DataSource = ExpensesServices.GetExpenses().Select(x => new { x.DateTime, x.Name, x.Bill }).ToList();
+            base.OnKeyPress(e);
         }
     }
 }

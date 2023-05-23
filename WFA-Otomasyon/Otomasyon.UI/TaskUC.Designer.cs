@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskUC));
             dgEmployee = new DataGridView();
-            dgManager = new DataGridView();
             label1 = new Label();
-            label2 = new Label();
             txtTaskName = new TextBox();
             label3 = new Label();
             label4 = new Label();
@@ -43,8 +43,8 @@
             radioButton2 = new RadioButton();
             textBox2 = new TextBox();
             button1 = new Button();
+            ımageList1 = new ImageList(components);
             ((System.ComponentModel.ISupportInitialize)dgEmployee).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgManager).BeginInit();
             SuspendLayout();
             // 
             // dgEmployee
@@ -59,19 +59,7 @@
             dgEmployee.Size = new Size(484, 237);
             dgEmployee.TabIndex = 0;
             dgEmployee.CellClick += dgEmployee_CellClick;
-            // 
-            // dgManager
-            // 
-            dgManager.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgManager.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgManager.BackgroundColor = SystemColors.Control;
-            dgManager.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgManager.Location = new Point(48, 352);
-            dgManager.Name = "dgManager";
-            dgManager.RowTemplate.Height = 25;
-            dgManager.Size = new Size(897, 164);
-            dgManager.TabIndex = 0;
-            dgManager.CellClick += dgManager_CellClick;
+            dgEmployee.RowPrePaint += dgEmployee_RowPrePaint;
             // 
             // label1
             // 
@@ -82,16 +70,6 @@
             label1.Size = new Size(56, 17);
             label1.TabIndex = 1;
             label1.Text = "Search :";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(48, 321);
-            label2.Name = "label2";
-            label2.Size = new Size(110, 17);
-            label2.TabIndex = 1;
-            label2.Text = "Manager In-Box:";
             // 
             // txtTaskName
             // 
@@ -187,6 +165,9 @@
             // 
             // button1
             // 
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.ImageKey = "Add Task.png";
+            button1.ImageList = ımageList1;
             button1.Location = new Point(599, 305);
             button1.Name = "button1";
             button1.Size = new Size(346, 33);
@@ -194,6 +175,13 @@
             button1.Text = "SUBMIT";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // ımageList1
+            // 
+            ımageList1.ColorDepth = ColorDepth.Depth8Bit;
+            ımageList1.ImageStream = (ImageListStreamer)resources.GetObject("ımageList1.ImageStream");
+            ımageList1.TransparentColor = Color.Transparent;
+            ımageList1.Images.SetKeyName(0, "Add Task.png");
             // 
             // TaskUC
             // 
@@ -206,19 +194,16 @@
             Controls.Add(dtpTarih);
             Controls.Add(textBox2);
             Controls.Add(txtTaskName);
-            Controls.Add(label2);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label6);
             Controls.Add(label3);
             Controls.Add(label1);
-            Controls.Add(dgManager);
             Controls.Add(dgEmployee);
             Name = "TaskUC";
             Size = new Size(984, 529);
             Load += TaskUC_Load;
             ((System.ComponentModel.ISupportInitialize)dgEmployee).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgManager).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -226,9 +211,7 @@
         #endregion
 
         private DataGridView dgEmployee;
-        private DataGridView dgManager;
         private Label label1;
-        private Label label2;
         private TextBox txtTaskName;
         private Label label3;
         private Label label4;
@@ -240,5 +223,6 @@
         private RadioButton radioButton2;
         private TextBox textBox2;
         private Button button1;
+        private ImageList ımageList1;
     }
 }

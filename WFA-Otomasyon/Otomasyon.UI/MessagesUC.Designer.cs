@@ -28,18 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessagesUC));
             dgInBox = new DataGridView();
             dgPersonel = new DataGridView();
-            dgTask = new DataGridView();
             rbMsg = new RichTextBox();
             btnSend = new Button();
+            ımageList1 = new ImageList(components);
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
             textBox1 = new TextBox();
+            txtTopic = new TextBox();
+            label4 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgInBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgPersonel).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgTask).BeginInit();
             SuspendLayout();
             // 
             // dgInBox
@@ -54,6 +57,7 @@
             dgInBox.RowTemplate.Height = 25;
             dgInBox.Size = new Size(416, 204);
             dgInBox.TabIndex = 0;
+            dgInBox.CellClick += dgInBox_CellClick;
             dgInBox.CellDoubleClick += dgInBox_CellDoubleClick;
             // 
             // dgPersonel
@@ -70,19 +74,6 @@
             dgPersonel.TabIndex = 0;
             dgPersonel.CellClick += dgPersonel_CellClick;
             // 
-            // dgTask
-            // 
-            dgTask.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgTask.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgTask.BackgroundColor = SystemColors.Control;
-            dgTask.BorderStyle = BorderStyle.None;
-            dgTask.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgTask.Location = new Point(39, 276);
-            dgTask.Name = "dgTask";
-            dgTask.RowTemplate.Height = 25;
-            dgTask.Size = new Size(416, 204);
-            dgTask.TabIndex = 0;
-            // 
             // rbMsg
             // 
             rbMsg.Location = new Point(528, 276);
@@ -93,13 +84,24 @@
             // 
             // btnSend
             // 
+            btnSend.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSend.ImageIndex = 0;
+            btnSend.ImageList = ımageList1;
             btnSend.Location = new Point(528, 457);
             btnSend.Name = "btnSend";
-            btnSend.Size = new Size(416, 23);
+            btnSend.Size = new Size(416, 40);
             btnSend.TabIndex = 2;
             btnSend.Text = "SEND MESSAGE";
             btnSend.UseVisualStyleBackColor = true;
             btnSend.Click += btnSend_Click;
+            // 
+            // ımageList1
+            // 
+            ımageList1.ColorDepth = ColorDepth.Depth8Bit;
+            ımageList1.ImageStream = (ImageListStreamer)resources.GetObject("ımageList1.ImageStream");
+            ımageList1.TransparentColor = Color.Transparent;
+            ımageList1.Images.SetKeyName(0, "Send Message.png");
+            ımageList1.Images.SetKeyName(1, "Delete Message.png");
             // 
             // label1
             // 
@@ -121,16 +123,6 @@
             label2.TabIndex = 3;
             label2.Text = "Search Personnel:";
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(39, 256);
-            label3.Name = "label3";
-            label3.Size = new Size(107, 17);
-            label3.TabIndex = 3;
-            label3.Text = "Incoming Tasks:";
-            // 
             // textBox1
             // 
             textBox1.Location = new Point(651, 9);
@@ -139,25 +131,55 @@
             textBox1.TabIndex = 4;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
+            // txtTopic
+            // 
+            txtTopic.Location = new Point(651, 247);
+            txtTopic.Name = "txtTopic";
+            txtTopic.Size = new Size(257, 23);
+            txtTopic.TabIndex = 5;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(538, 248);
+            label4.Name = "label4";
+            label4.Size = new Size(49, 17);
+            label4.TabIndex = 3;
+            label4.Text = "Topic :";
+            // 
+            // button1
+            // 
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.ImageIndex = 1;
+            button1.ImageList = ımageList1;
+            button1.Location = new Point(39, 457);
+            button1.Name = "button1";
+            button1.Size = new Size(416, 40);
+            button1.TabIndex = 2;
+            button1.Text = "DELETE MESSAGE";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // MessagesUC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(txtTopic);
             Controls.Add(textBox1);
-            Controls.Add(label3);
+            Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(button1);
             Controls.Add(btnSend);
             Controls.Add(rbMsg);
             Controls.Add(dgPersonel);
-            Controls.Add(dgTask);
             Controls.Add(dgInBox);
             Name = "MessagesUC";
             Size = new Size(984, 529);
             Load += MessagesUC_Load;
             ((System.ComponentModel.ISupportInitialize)dgInBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgPersonel).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgTask).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -166,12 +188,14 @@
 
         private DataGridView dgInBox;
         private DataGridView dgPersonel;
-        private DataGridView dgTask;
         private RichTextBox rbMsg;
         private Button btnSend;
         private Label label1;
         private Label label2;
-        private Label label3;
         private TextBox textBox1;
+        private TextBox txtTopic;
+        private Label label4;
+        private ImageList ımageList1;
+        private Button button1;
     }
 }

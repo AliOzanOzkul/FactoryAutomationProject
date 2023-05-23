@@ -1944,19 +1944,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ali Ozan\\.nuget\\packages\\": {}
+    "C:\\Users\\ALİ OZAN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj",
+      "projectUniqueName": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj",
       "projectName": "Otomasyon.BLL",
-      "projectPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj",
-      "packagesPath": "C:\\Users\\Ali Ozan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\obj\\",
+      "projectPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\Otomasyon.BLL.csproj",
+      "packagesPath": "C:\\Users\\ALİ OZAN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ali Ozan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ALİ OZAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1970,8 +1970,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj": {
-              "projectPath": "C:\\Users\\Ali Ozan\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj"
+            "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj": {
+              "projectPath": "C:\\Users\\ALİ OZAN\\Desktop\\WFA-Otomasyon\\Otomasyon.Model\\Otomasyon.Model.csproj"
             }
           }
         }
@@ -2001,7 +2001,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

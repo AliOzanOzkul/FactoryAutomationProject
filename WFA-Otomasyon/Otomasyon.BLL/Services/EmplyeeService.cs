@@ -27,9 +27,10 @@ namespace Otomasyon.BLL.Services
 
         public static List<object> GetAllEmployees()
         {
-            var myList = _db.Employees.Select(x => new { ID = x.Id, Name = x.Name, LastName = x.LastName, Salary = x.Salary, BirthDay = x.BirthDay, Departman = x.Departman, Gender = x.Gender, PhoneNo = x.PhoneNo, IdentityNo = x.IdentityNo }).ToList<object>();
+            var myList = _db.Employees.Select(x => new { ID = x.Id, Name = x.Name, LastName = x.LastName,Departman = x.Departman }).ToList<object>();
             return myList;
         }
+       
         public static Employee GetEmployee(int id)
         {
             var empList = _db.Employees.ToList();

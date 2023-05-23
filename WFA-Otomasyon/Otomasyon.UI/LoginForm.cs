@@ -18,9 +18,6 @@ namespace Otomasyon.UI
             var control = _db.Employees.FirstOrDefault(x => x.Name == textBox1.Text.ToLower() && x.LastName.ToLower() == textBox2.Text.ToLower());
             if (control != null)
             {
-
-
-
                 user = EmplyeeService.GetEmployeeName(textBox1.Text, textBox2.Text);
 
                 var select = _db.Employees.Find(user.Id);
@@ -28,6 +25,7 @@ namespace Otomasyon.UI
                 _db.SaveChanges();
                 MainForm mainForm = new MainForm();
                 mainForm.ShowDialog();
+                this.Close();
             }
             else
             {
